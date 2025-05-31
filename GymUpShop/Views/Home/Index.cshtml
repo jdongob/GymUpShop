@@ -1,0 +1,55 @@
+﻿@model HomeViewModel 
+<!--Recibe un ViewModel (list) esta Vista---> 
+
+
+<!-- Partial View -- boostrat code carrousel, Encontrar 3 Imagenes-->
+<partial name="_Carousel" />
+
+
+<!---for each a la Lista, Hacer el mismo boostrart que cuando se Lista todos los equipments,
+    pero aqui solo se listara todos los equipments donde el campo EquipmentOfWeek is true. (Solo son 3 creo)
+    Also, puedes poner en el equipment.Name los tagHelper para que creen un link que te envie a Pagina Details
+-->
+
+<div class="text-center">
+    <img src="Images/gymup-shop-logomark.png" class="logo-mark mx-auto" />
+    <h1>Equipment of the week</h1>
+    <h5>Enjoy a weekly discount on our favorite equipments</h5>
+
+    <div class="row pies-of-the-week">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var equipment in Model.EquipmentsOfTheWeek)
+            {
+               <partial name="_EquipmentCard" model="equipment" />  //PartialView
+            }
+        </div>
+
+    </div>
+</div>
+<!--Solo falta ir al "Header" en "Layout" view y agregar codigo para mostar 2 tabs en la cabecera; "Home" "Index" que ayuden en la navegacion -->
+
+
+
+
+<!-- Antes sin boostrap 
+
+        --Recibe un ViewModel (list) esta Vista--
+        @@model HomeViewModel 
+
+        -- boostrat code carrousel, Encontrar 3 Imagenes--
+
+        ---for each a la Lista, Hacer el mismo boostrart que cuando se Lista todos los equipments,
+            pero aqui solo se listara todos los equipments donde el campo EquipmentOfWeek is true. (Solo son 2 creo)
+            Also, tambien puedes poner en el equipment.Name los tagHelper para que creen un link que te envie a Pagina Details
+        ----
+
+        <h1>Equipment Of The Week</h1>
+        @@foreach (var equipment in Model.EquipmentsOfTheWeek)
+        {
+            @@equipment.Name
+            @@equipment.ImageThumbnailUrl
+            <img src="@@equipment.ImageThumbnailUrl" />
+            @@equipment.Price
+            <a asp-controller="Equipment" asp-action="Details" asp-route-id="@@equipment.EquipmentId">@@equipment.Name</a>
+        }
+--->

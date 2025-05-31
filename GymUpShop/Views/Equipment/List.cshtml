@@ -1,0 +1,88 @@
+﻿@model EquipmentListViewModel  //<!--Ahora recibe ViewModel "EquipmentListViewModel", solo con su NOMBRE -> ANTES era esto : " @model IEnumerable<GymUpShop.Models.Equipment> " ANTES recibia una lista "IEnumerable", ahora recibe un ViewModel-->
+
+
+<h1>@Model.CurrentCategory</h1>   <!--<h1>@ViewBag.CurrentCategory</h1> Ya no usamos el metodo ViewBag, para pasar el String, ahora es ViewModel metodo-->
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var equipment in Model.Equipments)  // Ahora este "Model" tiene wrap de data, hay que especificar con el punto, cual queremos la "List" o el "String"
+    {
+
+        <partial name="_EquipmentCard" model="equipment" />
+    }
+
+
+</div>
+
+
+
+    <!-- Todo esto es codigo repetido y se usa PartialView
+
+    <div class="col">
+        <div class="card pie-card">
+            <img src="@@equipment.ImageThumbnailUrl" class="card-img-top" alt="@@equipment.Name">
+            <div class="card-body pie-button">
+                <h4 class="d-grid">
+                </h4>
+
+                <div class="d-flex justify-content-between mt-2">
+
+                    //--TagHelper Se usa TagHelper para generar un Link cuando corre la aplicacion, dinamicamente. El resultado del TagHelper es una ruta : "/Pie/List" , por eso va asocicado al <a> tab html, porque esa ruta te va enviar a otra pagina asi queda: "<a href="/Pie/List">View Pie List</a>" se genero dinamicamente un link, gracias al uso de tag helper. Asociado al control "LINK <a> tab" de HTML, Sirve para generar una Route o Link dinamicamente
+                    //-- TagHelper: se pone en el primer <a> abierto:  <a ...aqui....></a  NO aqui> , otro ejemplo abajo al final de la pag.
+
+
+                    <h2 class="text-start">
+
+                            <a class="pie-link"
+                            asp-controller="Equipment"
+                            asp-action="Details"
+                            asp-route-id="@@equipment.EquipmentId">@@equipment.Name</a>
+
+                            //--asp-route-id: asp-rout-NameOfParametro, Ese "id" es el nombre del Parametro que utiliza la Action Detalles que usa un parametro, Tiene que ser el mismo que se pide en el codigo escrito en el controllerEquipemet y la Action Details: "public IActionResult Details(int id)" el 'id" esta en minuscula ojo.
+
+
+                            //--El Resultado :
+                                <a href="/Equipment/Details/3">Equipment Name Valor</a>
+
+                                Generara dinamicamente el link para ir hacia la pagina Detalles y para eso necesita un Controller/Action/Parametro(id) la pag Detalles necesita que se envie un Parametro., Entonces va al Controller Equipment y a la Action Details, con el Parametro enviado y ejecuta el codigo que esta ahi, el cual mostrara la View Details con la imagen ,precio etc del Equipment solicitado, solo es 1 registro xq va por "id"
+                                y EJECUTA el codigo que se encuentra ahi...es decir mostrara el detalle de ese equipment
+                            --//
+
+                            //--TagHelper,ayuda en la Navegacion, al igual que "MapDefaultControllerRoute"", USA el "MapDefaultControllerRoute"" como base de su PATTERN para enviar los atributos adecuados.TagHelper Ayudan a generar un Link<a> dinamicamente. Los TagHelpers estan asociados al <a> Angor Tab de HTML, Puedes encontrar TagHElper en los <a> Angor Tab. Ayuda a generar un "link = <a>" dinamicamente con los atributos en el "ANGOR TAG (a)" como: "asp-controller and asp-action y asp-rount-NameParametro", si usa un parametro xq el parametro es opcional. Esto usa el Pattern x default MapDefaultControllerRoutes, y es por eso que envia un Controller, un Action y Un Parametro que es opcional, lo envia x medio de ATRIBUTOS del Angor Tab <a asp-controller="XX" asp_action="XX asp-route-NameParametro = valor > con todo esto generara o CREARA dinamicamente cuando se haga CLIKC en el link <a> una Route o Pattern dinamicamenta basado en los ATRIBUTOS marcados en el ANGOR tab <a>"
+                    </h2>
+                    <h5 class="text-nowrap">
+                        @@equipment.Price.ToString("c")
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    -->
+
+
+    <!-- Antes sin boostrap 
+    <div>
+        <h2>@@equipment.Name</h2>
+        <h3>@@equipment.Price.ToString("c")</h3>
+        <h4>@@equipment.Category.CategoryName</h4>
+    </div>
+    -->
+
+
+    <!--Ejemplo 
+        
+        TagHelper to Navigation, Los atributos o TagHelper se pone en el primer <a ...aqui....></a>
+
+        <a asp-controller="Pie" asp-action="List">
+            View Pie List
+        </a>
+        
+        TagHelper --The Resulting HTML --El Resultado
+
+        <a href="/Pie/List">View Pie List</a>
+    -->
+
+
+
+
+        

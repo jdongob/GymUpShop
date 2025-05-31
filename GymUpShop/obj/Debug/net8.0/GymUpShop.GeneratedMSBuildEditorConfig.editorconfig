@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GymUpShop
+build_property.RootNamespace = GymUpShop
+build_property.ProjectDir = C:\CodeASP\GymUpShop\GymUpShop\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\CodeASP\GymUpShop\GymUpShop
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Equipment/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Equipment/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Shared/Components/CategoryEquipment/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlFcXVpcG1lbnRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Shared/_Carousel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Shared/_EquipmentCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcXVpcG1lbnRDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CodeASP/GymUpShop/GymUpShop/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,7 @@
+﻿@using GymUpShop.Models         // cuando devuelve 1 solo registro bd, 1 entidad Equipment o 1 Entidad Category
+@using GymUpShop.ViewModels     // cuando devuelve varias cosas como una LISTA y una Cadena string, se crea un ViewModel para empaquetar todo y enviarlo a la Vista
+                                                           // Puedes declarar TagHelper en cada View que quiera utilizarlo, o ponerlo aqui ViewImport, para TODAS las View vistas.
+@using GymUpShop.Components
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers 
+@addTagHelper *, GymUpShop
